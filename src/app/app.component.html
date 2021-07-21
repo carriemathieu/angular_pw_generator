@@ -42,48 +42,12 @@
         Generate!
       </button>
 
-      <div class="box">
+      <!-- structural directive to conditionally show/hide div -->
+      <!-- go to app component... if "password" is falsy, hide -->
+      <div class="box" *ngIf="password">
         <label>Your Password</label>
         <input class="input" [value]="password" />
       </div>
     </div>
   </div>
 </div>
-
-<!-- <h1>Password Generator</h1>
-
-<div>
-  <label>Enter Length</label>
-  
-</div>
-
-<div>
-  <label>Use Letters</label>
-  <input type="checkbox" (change)="onChangeUseLetters()"/>
-</div>
-
-<div>
-  <label>Use Numbers</label>
-  <input type="checkbox" (change)="onChangeUseNumbers()"/>
-</div>
-
-<div>
-  <label>Use Symbols</label>
-  <input type="checkbox" (change)="onChangeUseSymbols()"/>
-</div>
-
-<div>
-  <button 
-    [disabled]="
-      !(length && (includeLetters || includeSymbols || includeNumbers))
-    " 
-    (click)="onButtonClick()"
-    >
-    Generate!
-  </button>
-</div>
-
-<div>
-  <label>Your Password</label>
-  <input [value]="password"/>
-</div> -->
