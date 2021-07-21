@@ -3,7 +3,7 @@
 <div>
   <label>Enter Length</label>
   <!-- to access event variable, use "$" -->
-  <input (input)="onChangeLength($event.target.value)"/>
+  <input (input)="onChangeLength($event)"/>
 </div>
 
 <div>
@@ -18,7 +18,7 @@
 
 <div>
   <label>Use Symbols</label>
-  <input type="checkbox" (change)="onChangeUseSymbols"/>
+  <input type="checkbox" (change)="onChangeUseSymbols()"/>
 </div>
 
 <div>
